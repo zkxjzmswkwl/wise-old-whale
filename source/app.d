@@ -3,8 +3,9 @@ import std.array;
 import std.net.curl;
 import std.regex;
 import std.file;
-import std.algorithm;
 import std.conv;
+import std.string;
+import std.json;
 import std.datetime.systime : Clock;
 
 string A_PAGE_ONE = "&amp;page=1\">";
@@ -44,9 +45,25 @@ auto skillArray = [
 	"Archaeology"
 ];
 
-string parseStat(string tableCol)
+struct Skill
 {
-	return tableCol.split(A_PAGE_ONE)[1].split(A_CLOSE)[0].replace(",", "");
+	long rank;
+	long exp;
+	long level;
+}
+
+JSONValue jsonSkills;
+
+Skill* getSkill(string name)
+{
+	if (jsonSkills.isNull) {
+		jsonSkills = parseJSON(std.file.readText("skills.json"));
+	}
+
+	return new Skill(
+		jsonSkills[name]["rank"].integer,
+		jsonSkills[name]["exp"].integer,
+		jsonSkills[name]["level"].integer);
 }
 
 string toJSON(
@@ -73,38 +90,47 @@ string toJSON(
 	return ret;
 }
 
+string parseStat(string tableCol)
+{
+	return tableCol.split(A_PAGE_ONE)[1].split(A_CLOSE)[0].replace(",", "");
+}
+
 void main()
 {
-	char[] szContent = get("https://secure.runescape.com/m=hiscore/compare?user1=girthyplayer");
-	string scoreTable = szContent.idup.split("<tbody>")[1].split("</tbody>")[0];
-	string regexTest = split(scoreTable, "/<tr >|<tr class=\"oddRow\">/g")[0];
+	writeln(getSkill("Construction").level);
+	writeln(getSkill("Constitution").level);
+	writeln(getSkill("WoodCutting").exp);
+	// string nowTime = Clock.currTime().toISOString();
 
-	string lastSkill = "Sailing";
-	string[] iterateMe = regexTest.split("\n");
+	// string scoreTable = szContent.idup.split("<tbody>")[1].split("</tbody>")[0];
+	// string regexTest = split(scoreTable, "/<tr >|<tr class=\"oddRow\">/g")[0];
 
-	string jsonBlob = "{\n\t\"timestamp\": \"" ~ Clock.currTime().toISOString() ~ "\",";
-	for (int i = 0; i < iterateMe.length; i++)
-	{
-		if (canFind(iterateMe[i], A_PAGE_ONE))
-		{
-			int skillIndex = iterateMe[i].split(TABLE_EQUALS)[1].split(TABLE_EQUALS_END)[0].to!int;
-			if (lastSkill != skillArray[skillIndex])
-			{
-				writeln(skillArray[skillIndex]);
-				lastSkill = skillArray[skillIndex];
+	// string lastSkill = "Sailing";
+	// string[] iterateMe = regexTest.split("\n");
 
-				// Only add trailing comma to last skill. This is a bit hacky. too bad.
-				bool shouldAddComma = lastSkill != "Archaeology";
-				jsonBlob = jsonBlob ~ toJSON(lastSkill,
-					parseStat(iterateMe[i]),
-					parseStat(iterateMe[i + 1]),
-					parseStat(iterateMe[i + 2]),
-					shouldAddComma);
-			}
-		}
-	}
+	// string jsonBlob = "{\n\t\"timestamp\": \"" ~  ~ "\",";
+	// for (int i = 0; i < iterateMe.length; i++)
+	// {
+	// 	if (canFind(iterateMe[i], A_PAGE_ONE))
+	// 	{
+	// 		int skillIndex = iterateMe[i].split(TABLE_EQUALS)[1].split(TABLE_EQUALS_END)[0].to!int;
+	// 		if (lastSkill != skillArray[skillIndex])
+	// 		{
+	// 			writeln(skillArray[skillIndex]);
+	// 			lastSkill = skillArray[skillIndex];
 
-	jsonBlob = jsonBlob ~ "\n}";
+	// 			// Only add trailing comma to last skill. This is a bit hacky. too bad.
+	// 			bool shouldAddComma = lastSkill != "Archaeology";
+	// 			jsonBlob = jsonBlob ~ toJSON(lastSkill,
+	// 				parseStat(iterateMe[i]),
+	// 				parseStat(iterateMe[i + 1]),
+	// 				parseStat(iterateMe[i + 2]),
+	// 				shouldAddComma);
+	// 		}
+	// 	}
+	// }
 
-	std.file.write("skills.json", jsonBlob);
+	// jsonBlob = jsonBlob ~ "\n}";
+
+	// std.file.write("girthyplayer-" ~ nowTime ~ ".json", jsonBlob);
 }
