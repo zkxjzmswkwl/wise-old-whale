@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/wiseoldwhale
+wiseoldwhale.exe
+wiseoldwhale.so
+wiseoldwhale.dylib
+wiseoldwhale.dll
+wiseoldwhale.a
+wiseoldwhale.lib
+wiseoldwhale-test-*
+*.exe
+*.o
+*.obj
+*.lst
