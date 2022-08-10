@@ -5,7 +5,7 @@ import std.regex;
 import std.file;
 import std.algorithm;
 import std.conv;
-import std.datetime.systime: Clock;
+import std.datetime.systime : Clock;
 
 string A_PAGE_ONE = "&amp;page=1\">";
 string A_CLOSE = "</a>";
@@ -55,12 +55,17 @@ string toJSON(
 	string exp,
 	string level,
 	bool addTrailingComma
-) {
+)
+{
 	string ret = `
-	`~"\""~skill~"\": {"~`
-		"rank": `~rank~`,
-		"exp": `~exp~`,
-		"level": `~level~`
+	`
+		~ "\"" ~ skill ~ "\": {" ~ `
+		"rank": `
+		~ rank ~ `,
+		"exp": `
+		~ exp ~ `,
+		"level": `
+		~ level ~ `
 	}`;
 
 	if (addTrailingComma)
@@ -77,7 +82,7 @@ void main()
 	string lastSkill = "Sailing";
 	string[] iterateMe = regexTest.split("\n");
 
-	string jsonBlob = "{\n\t\"timestamp\": \""~Clock.currTime().toISOString()~"\",";
+	string jsonBlob = "{\n\t\"timestamp\": \"" ~ Clock.currTime().toISOString() ~ "\",";
 	for (int i = 0; i < iterateMe.length; i++)
 	{
 		if (canFind(iterateMe[i], A_PAGE_ONE))
@@ -91,14 +96,14 @@ void main()
 				// Only add trailing comma to last skill. This is a bit hacky. too bad.
 				bool shouldAddComma = lastSkill != "Archaeology";
 				jsonBlob = jsonBlob ~ toJSON(lastSkill,
-											parseStat(iterateMe[i]),
-											parseStat(iterateMe[i + 1]), 
-											parseStat(iterateMe[i + 2]),
-											shouldAddComma);
+					parseStat(iterateMe[i]),
+					parseStat(iterateMe[i + 1]),
+					parseStat(iterateMe[i + 2]),
+					shouldAddComma);
 			}
 		}
 	}
-	
+
 	jsonBlob = jsonBlob ~ "\n}";
 
 	std.file.write("skills.json", jsonBlob);

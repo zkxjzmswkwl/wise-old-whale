@@ -1,12 +1,12 @@
 {
-	"timestamp": "20220810T100823.9207395",
+	"timestamp": "20220810T101910.0628106",
 	"Total": {
 		"rank": 222469,
 		"exp": 271460365,
 		"level": 2485
 	},
 	"Attack": {
-		"rank": 113686,
+		"rank": 113684,
 		"exp": 21509574,
 		"level": 99
 	},
@@ -16,32 +16,32 @@
 		"level": 99
 	},
 	"Strength": {
-		"rank": 158741,
+		"rank": 158739,
 		"exp": 16394345,
 		"level": 99
 	},
 	"Constitution": {
-		"rank": 211070,
+		"rank": 211066,
 		"exp": 22315403,
 		"level": 99
 	},
 	"Ranged": {
-		"rank": 258911,
+		"rank": 258907,
 		"exp": 13123595,
 		"level": 99
 	},
 	"Prayer": {
-		"rank": 308027,
+		"rank": 308024,
 		"exp": 7201013,
 		"level": 93
 	},
 	"Magic": {
-		"rank": 416739,
+		"rank": 416733,
 		"exp": 3685742,
 		"level": 86
 	},
 	"Cooking": {
-		"rank": 348940,
+		"rank": 348931,
 		"exp": 2686461,
 		"level": 83
 	},
@@ -51,12 +51,12 @@
 		"level": 99
 	},
 	"Fletching": {
-		"rank": 183733,
+		"rank": 183731,
 		"exp": 13240635,
 		"level": 99
 	},
 	"Fishing": {
-		"rank": 182018,
+		"rank": 182017,
 		"exp": 13614547,
 		"level": 99
 	},
@@ -66,22 +66,22 @@
 		"level": 99
 	},
 	"Crafting": {
-		"rank": 305755,
+		"rank": 305753,
 		"exp": 3268817,
 		"level": 85
 	},
 	"Smithing": {
-		"rank": 282790,
+		"rank": 282788,
 		"exp": 5629076,
 		"level": 90
 	},
 	"Mining": {
-		"rank": 257292,
+		"rank": 257291,
 		"exp": 6689264,
 		"level": 92
 	},
 	"Herblore": {
-		"rank": 234760,
+		"rank": 234759,
 		"exp": 13077120,
 		"level": 99
 	},
@@ -91,47 +91,47 @@
 		"level": 84
 	},
 	"Thieving": {
-		"rank": 247726,
+		"rank": 247722,
 		"exp": 2801894,
 		"level": 83
 	},
 	"Slayer": {
-		"rank": 298514,
+		"rank": 298511,
 		"exp": 4231228,
 		"level": 87
 	},
 	"Farming": {
-		"rank": 375482,
+		"rank": 375481,
 		"exp": 449722,
 		"level": 65
 	},
 	"Runecrafting": {
-		"rank": 433419,
+		"rank": 433414,
 		"exp": 307465,
 		"level": 61
 	},
 	"Hunter": {
-		"rank": 323350,
+		"rank": 323346,
 		"exp": 1221939,
 		"level": 75
 	},
 	"Construction": {
-		"rank": 278154,
+		"rank": 278150,
 		"exp": 2306815,
 		"level": 81
 	},
 	"Summoning": {
-		"rank": 299221,
+		"rank": 299219,
 		"exp": 2524486,
 		"level": 82
 	},
 	"Dungoneering": {
-		"rank": 266550,
+		"rank": 266548,
 		"exp": 4107449,
 		"level": 87
 	},
 	"Divination": {
-		"rank": 186013,
+		"rank": 186014,
 		"exp": 10306126,
 		"level": 96
 	},
@@ -141,7 +141,7 @@
 		"level": 103
 	},
 	"Archaeology": {
-		"rank": 245806,
+		"rank": 245811,
 		"exp": 347310,
 		"level": 62
 	}
