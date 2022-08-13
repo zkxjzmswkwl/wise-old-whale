@@ -3,6 +3,9 @@
 		"Carter"
 	],
 	"copyright": "Copyright © 2022, Carter",
+	"dependencies": {
+		"vibe-d": "~>0.9.5"
+	},
 	"description": "WiseOldMan but for the whale game (Rs3)",
 	"license": "can use if maxed or if give me 2b",
 	"name": "wiseoldwhale"

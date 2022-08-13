@@ -1,0 +1,147 @@
+{
+    "Agility": {
+        "exp": "39103888",
+        "level": "99",
+        "rank": "29641"
+    },
+    "Archaeology": {
+        "exp": "107033968",
+        "level": "120",
+        "rank": "49249"
+    },
+    "Attack": {
+        "exp": "47688102",
+        "level": "99",
+        "rank": "52828"
+    },
+    "Constitution": {
+        "exp": "116607039",
+        "level": "99",
+        "rank": "44941"
+    },
+    "Construction": {
+        "exp": "33975909",
+        "level": "99",
+        "rank": "25053"
+    },
+    "Cooking": {
+        "exp": "33677452",
+        "level": "99",
+        "rank": "26315"
+    },
+    "Crafting": {
+        "exp": "30432728",
+        "level": "99",
+        "rank": "32247"
+    },
+    "Defense": {
+        "exp": "104508642",
+        "level": "99",
+        "rank": "43359"
+    },
+    "Divination": {
+        "exp": "59218884",
+        "level": "99",
+        "rank": "16240"
+    },
+    "Dungoneering": {
+        "exp": "135830724",
+        "level": "120",
+        "rank": "20904"
+    },
+    "Farming": {
+        "exp": "107908692",
+        "level": "120",
+        "rank": "45349"
+    },
+    "Firemaking": {
+        "exp": "18866035",
+        "level": "99",
+        "rank": "75398"
+    },
+    "Fishing": {
+        "exp": "108483950",
+        "level": "99",
+        "rank": "14576"
+    },
+    "Fletching": {
+        "exp": "17442332",
+        "level": "99",
+        "rank": "52207"
+    },
+    "Herblore": {
+        "exp": "105655041",
+        "level": "120",
+        "rank": "42884"
+    },
+    "Hunter": {
+        "exp": "45223333",
+        "level": "99",
+        "rank": "29318"
+    },
+    "Invention": {
+        "exp": "93167869",
+        "level": "120",
+        "rank": "73888"
+    },
+    "Magic": {
+        "exp": "51441178",
+        "level": "99",
+        "rank": "68638"
+    },
+    "Mining": {
+        "exp": "88486534",
+        "level": "99",
+        "rank": "22494"
+    },
+    "Prayer": {
+        "exp": "20481601",
+        "level": "99",
+        "rank": "48623"
+    },
+    "Ranged": {
+        "exp": "140020574",
+        "level": "99",
+        "rank": "22979"
+    },
+    "Runecrafting": {
+        "exp": "18441720",
+        "level": "99",
+        "rank": "43823"
+    },
+    "Slayer": {
+        "exp": "106990287",
+        "level": "120",
+        "rank": "43757"
+    },
+    "Smithing": {
+        "exp": "22148317",
+        "level": "99",
+        "rank": "50696"
+    },
+    "Strength": {
+        "exp": "22525033",
+        "level": "99",
+        "rank": "107783"
+    },
+    "Summoning": {
+        "exp": "21214719",
+        "level": "99",
+        "rank": "44780"
+    },
+    "Thieving": {
+        "exp": "200000000",
+        "level": "99",
+        "rank": "2237"
+    },
+    "Total": {
+        "exp": "1942647115",
+        "level": "2898",
+        "rank": "24180"
+    },
+    "WoodCutting": {
+        "exp": "46072564",
+        "level": "99",
+        "rank": "19881"
+    }
+}
